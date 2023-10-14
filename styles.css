@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#cards_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.user-card {
+  border-top: 3px solid #a87ca0;
+  border-radius: 3px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card_title {
+  color: rgb(16, 137, 199);
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 10px;
+}
+img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #cards_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #cards_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
