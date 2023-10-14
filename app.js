@@ -21,18 +21,24 @@ function displayUserCards(cardsData) {
     day = date.getDate();
     month = date.toLocaleDateString("en-GB", { month: "long" });
     year = date.getFullYear();
+    let cardCategory = cardData._embedded["wp:term"][0][0].name;
+
+    let cardTags = cardData._embedded["wp:term"][1].map((tag) => {
+      return tag.name;
+    });
 
     card.innerHTML = `
+        <h3 class="card_category">${cardCategory}</h3>
         <hr />
         <img src="${cardData.featured_media}" alt="${"asd"}">
         <h3 class="card_title">${cardData.title.rendered}</h3>
-        <p class="card_description">By ${
+        <p class="card_description">By <span>${
           cardData._embedded.author[0].name
-        } on ${day} ${month} ${year}</p>
-        <hr />
-        <h5>${cardData.type}</h5>
-        
-
+        }</span> on ${day} ${month} ${year}</p>
+        <article class="card_tags">
+          <hr />
+          <p >${cardTags.length > 0 ? cardTags.join(", ") : "No tags"}</p>
+        </article>
         `;
     app.appendChild(card);
   });
