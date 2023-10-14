@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
 }
 
 hr {
@@ -23,20 +25,16 @@ hr {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: 15px;
 }
 
 .card_title {
   color: rgb(16, 137, 199);
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
   font-size: 25px;
 }
 
 .card_description {
   color: #000;
-  font-family: "poppins", sans-serif;
   font-weight: 300;
   font-style: italic;
   font-size: 18px;
@@ -48,18 +46,14 @@ hr {
 }
 .card_category {
   color: #000;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
   font-size: 18px;
+  letter-spacing: 1px;
 }
 .card_tags {
   margin-top: auto;
 }
 .card_tags > p {
   color: #000;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
   font-size: 15px;
   text-transform: capitalize;
   margin-top: 10px;
